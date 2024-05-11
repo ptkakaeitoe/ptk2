@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imaginary realm</title>
+    <!-- Bootstrap CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.d8e0d294.css" />
+    <style>
+      .card {
+        border-color: lightblue;
+      }
+      .card-header,
+      .card-footer {
+        background-color: lightblue;
+      }
+      /* Base styles for the navbar (adjust these as necessary) */
+      .navbar-nav .nav-link {
+        font-size: 16px; /* Default font size */
+        padding: 10px 15px; /* Default padding */
+      }
+
+      .navbar-brand {
+        font-size: 24px; /* Default brand size */
+      }
+
+      /* Styles for large screens */
+      @media (min-width: 992px) {
+        /* Adjusting for large devices (large desktops, 992px and up) */
+        .navbar-nav .nav-link {
+          font-size: 20px; /* Larger font size for nav links */
+          padding: 15px 30px; /* Larger padding for nav items */
+        }
+
+        .navbar-brand {
+          font-size: 30px; /* Larger size for the navbar brand */
+        }
+      }
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        /* Ensures the navbar remains on top of other content */
+      }
+      body {
+        background-color: #645862;
+      }
+      .card:hover {
+        transform: scale(1.04); /* Slightly increase the size of the card */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+        cursor: pointer; /* Change the mouse cursor to indicate it's clickable */
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: bisque"
+    >
+      <a class="navbar-brand" href="#">Imaginary realm</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#welcome"
+              >Welcome <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section
+      id="welcome"
+      class="py-5 mx-5 my-10"
+      style="background-color: bisque"
+    >
+      <div class="container mt-5">
+        <h2 class="text-center mb-4">Welcome From imaginary realm</h2>
+        <p class="lead text-center">
+          We're delighted to have you here. In our imaginary realm, all of your
+          thoughts and dreams can be turned into reality by using the apps we've
+          built.
+        </p>
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <img
+              src="spider.jpg"
+              class="img-fluid rounded mb-3 w-100"
+              style="max-height: 250px; object-fit: cover"
+              alt="Welcome"
+            />
+          </div>
+          <div class="col-md-8 mt-md-5 mt-sm-3 mt-xs-1">
+            <h2>
+              So why are you waiting to join a new world and to turn your
+              imagination into reality?
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="py-5 mx-5" style="background-color: bisque">
+      <div class="container">
+        <h2 class="text-center mb-4">About Our projects</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              src="landing.jpeg"
+              class="img-fluid rounded mb-3 w-100 my-5"
+              style="max-height: 250px; object-fit: cover; max-width: 350px"
+              alt="About Us"
+            />
+          </div>
+          <div class="col-md-8 mt-md-5 mt-sm-3 mt-xs-1">
+            <h3 class="my-0">Our Mission</h3>
+            <p>
+              To implement what we have learnt by building small apps as much as
+              we can and grow from there by building a vision
+            </p>
+            <h3>Our goal</h3>
+            <p>
+              Our goal is to learn from each other by building projects together
+              and sharing knowledge that we accquire.
+            </p>
+            <h3>Our progress</h3>
+            <p>
+              Currently,we have aleady built five projects ,<strong
+                >chatbot and art gallery</strong
+              >
+              which are built by implementing api, and
+              <strong>lobby chat</strong> what is built with firebase and
+              <strong>library and eduhub</strong> which are simply built with
+              html,css and javascript
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container mt-5" id="projects">
+      <div class="projects-section">
+        <h2 class="text-center project-heading">Our Projects</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <a href="../chatbox/index.html">
+                <img
+                  src="wireframe_chatbot.png"
+                  class="card-img-top"
+                  alt="..."
+                  height="280"
+                />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Ask anything(UITgpt kek)</h5>
+                <p class="card-text">A chatbot built with chatgpt api</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <a href="../lobby/chattest.html">
+                <img
+                  src="depositphotos_152676294-stock-photo-multiethnic-friends-gathering-cheerful-diverse.jpg"
+                  class="card-img-top"
+                  alt="..."
+                  height="280"
+                />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Friends Gathering</h5>
+                <p class="card-text">A Vibing place</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <a href="../gallery/index.html">
+                <img
+                  src="museums-in-singapore.webp"
+                  class="card-img-top"
+                  alt="..."
+                  height="280"
+                />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Art Gallery</h5>
+                <p class="card-text">Enjoy the beauty by searching</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <a href="../bookstore2/index5.html">
+                <img
+                  src="library.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                  height="280"
+                />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Library</h5>
+                <p class="card-text">
+                  enrich your mind here as books are your best friends
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <a href="../studyhub/mainpage.html">
+                <img
+                  src="eduhub.png"
+                  class="card-img-top"
+                  alt="..."
+                  height="280"
+                />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Eduhub</h5>
+                <p class="card-text">
+                  a program to learn every subject you have to learn at UIT
+                  extensively
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Store Website</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      /* Custom styles for ensuring uniform book cover sizes */
+      .card-img-top {
+        height: 200px; /* Adjust the height as needed */
+        object-fit: cover; /* This will ensure the image covers the area without losing aspect ratio */
+        width: 100%; /* This will ensure the image covers the full width of the card */
+      }
+      card {
+        margin: 20px;
+      }
+    </style>
+
+    <!-- Your custom styles after Bootstrap to override if needed -->
+  </head>
+  <body>
+    <header>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="img/bookstore-icon-1.jpg"
+              alt="Logo"
+              style="width: 80px"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#Home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#About">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Featured">Featured</a>
+              </li>
+              <!-- More nav items -->
+            </ul>
+          </div>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+          <div class="social-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-heart"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section class="main-content py-5" id="Home">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h1>Welcome to <br /><span>Bookstore</span></h1>
+            <p>
+              Welcome to our library! We're delighted to have you with us. Dive
+              into our rich collection, where every book holds a universe
+              waiting to be discovered. Whether you're here to lose yourself in
+              a story, seek knowledge, or find a quiet corner to study, you've
+              come to the right place. Our dedicated staff is always on hand to
+              help you navigate our shelves and digital resources. Join us for
+              workshops, readings, and community events to connect with fellow
+              book lovers. Your journey of discovery and inspiration starts
+              here. Welcome to a space where your imagination can soar,
+              knowledge grows, and community thrives. We're so glad you're here!
+            </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+          <div class="col-md-6">
+            <img src="img/img-3.jpg" class="img-fluid" alt="Responsive image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services py-5 text-center" id="Services">
+      <div class="container">
+        <h2 class="section-title mb-5">Our Services</h2>
+        <!-- Add a title for the section -->
+        <div class="row">
+          <!-- Single Service -->
+          <div class="col-md-3 mb-4">
+            <div class="service-card shadow-sm p-3 mb-5 bg-white rounded">
+              <!-- Added classes for styling -->
+              <i class="fas fa-truck fa-3x service-icon mb-3"></i>
+              <!-- Added margin for spacing -->
+              <h4 class="service-title">Fast Delivery</h4>
+              <!-- Changed to h4 for semantic structure -->
+              <p class="service-description">
+                Experience lightning-fast delivery with our state-of-the-art
+                logistics network. Your orders will reach your doorstep in no
+                time, ensuring your reading never stops.
+              </p>
+            </div>
+          </div>
+
+          <!-- Additional services can be copied from the template above and modified as needed -->
+
+          <!-- Example for another service -->
+          <div class="col-md-3 mb-4">
+            <div class="service-card shadow-sm p-3 mb-5 bg-white rounded">
+              <i class="fas fa-book-open fa-3x service-icon mb-3"></i>
+              <h4 class="service-title">Diverse Catalog</h4>
+              <p class="service-description">
+                Dive into our vast collection of books across multiple genres.
+                Whether you are a fan of timeless classics or contemporary
+                bestsellers, we have something for everyone.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="service-card shadow-sm p-3 mb-5 bg-white rounded">
+              <i class="fas fa-book-open fa-3x service-icon mb-3"></i>
+              <h4 class="service-title">Diverse Catalog</h4>
+              <p class="service-description">
+                Dive into our vast collection of books across multiple genres.
+                Whether you are a fan of timeless classics or contemporary
+                bestsellers, we have something for everyone.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="service-card shadow-sm p-3 mb-5 bg-white rounded">
+              <i class="fas fa-book-open fa-3x service-icon mb-3"></i>
+              <h4 class="service-title">Diverse Catalog</h4>
+              <p class="service-description">
+                Dive into our vast collection of books across multiple genres.
+                Whether you are a fan of timeless classics or contemporary
+                bestsellers, we have something for everyone.
+              </p>
+            </div>
+          </div>
+
+          <!-- Repeat for more services as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about py-5" id="About">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="img/img-5.jpg" class="img-fluid" alt="Responsive image" />
+          </div>
+          <div class="col-lg-6">
+            <h1>About Us</h1>
+            <p>
+              Welcome to our Library! We are thrilled to have you join our
+              community of readers, learners, and explorers. Within the walls of
+              our library, you will discover a vast and diverse collection of
+              books, magazines, and digital resources designed to inform,
+              entertain, and inspire. Whether you're looking to dive into the
+              depths of history, explore the realms of fiction, or uncover new
+              knowledge in science and technology, our library offers a serene
+              and welcoming environment for all ages. Our dedicated staff is
+              here to assist you in finding the perfect read, navigating our
+              resources, or attending one of our many engaging events. Join us
+              on this journey of discovery and let your love for reading grow in
+              a place where stories come alive. Welcome aboard!
+            </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Books -->
+    <section class="featured-books py-5" id="Featured">
+      <div class="container">
+        <h1 class="text-center">Featured Books</h1>
+        <div class="row">
+          <!-- Single Book -->
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/cover-1.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Book Title</h5>
+                <p class="card-text">Some quick example text.</p>
+                <a href="#" class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="img/cover-4.jpg"
+                class="card-img-top"
+                alt="Featured Book"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Featured Books</h5>
+                <p class="card-text">
+                  Writer: John Deo - Categories: Thriller, Horror, Romance
+                </p>
+                <a href="#" class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="img/cover-5.jpg"
+                class="card-img-top"
+                alt="Featured Book"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Featured Books</h5>
+                <p class="card-text">
+                  Writer: John Deo - Categories: Thriller, Horror, Romance
+                </p>
+                <a href="#" class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="img/cover-6.jpg"
+                class="card-img-top"
+                alt="Featured Book"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Featured Books</h5>
+                <p class="card-text">
+                  Writer: John Deo - Categories: Thriller, Horror, Romance
+                </p>
+                <a href="#" class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="img/cover-7.jpg"
+                class="card-img-top"
+                alt="Featured Book"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Featured Books</h5>
+                <p class="card-text">
+                  Writer: John Deo - Categories: Thriller, Horror, Romance
+                </p>
+                <a href="#" class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="img/cover-8.jpg"
+                class="card-img-top"
+                alt="Featured Book"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Featured Books</h5>
+                <p class="card-text">
+                  Writer: John Deo - Categories: Thriller, Horror, Romance
+                </p>
+                <a href="#" class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="img/cover-9.jpg"
+                class="card-img-top"
+                alt="Featured Book"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Featured Books</h5>
+                <p class="card-text">
+                  Writer: John Deo - Categories: Thriller, Horror, Romance
+                </p>
+                <a href="#" class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- More books -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-light">
+      <div class="container">
+        <p class="m-0 text-center text-black">
+          Copyright &amp; Bookstore Website 2024
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

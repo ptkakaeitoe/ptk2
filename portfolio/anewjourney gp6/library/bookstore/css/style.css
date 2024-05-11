@@ -1,0 +1,258 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: sans-serif;
+}
+
+section{
+  width:100%;
+  height:100vh;
+  background-color: blanchedalmond;
+  
+}
+
+section nav{
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 10px lightblue;
+  background: rgb(255, 255, 255);
+  position: fixed;
+  left:0;
+  z-index: 100;
+}
+
+
+section nav .logo img{width:80px;
+  cursor:pointer;
+  margin:10px 0;
+  
+}
+
+section nav ul {list-style: none;
+
+}
+
+section nav li {display:inline-block;
+  padding:0 10px;
+
+}
+
+section nav li a {text-decoration: none;
+  color:black;
+
+}
+
+section nav li a:hover{color:aqua
+
+}
+
+section nav .social-icon i{font-size: 18px;
+  padding:0 8px;
+
+}
+
+section nav .social-icon i:hover {color:aqua;
+
+}
+
+section .main{display:flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top:10%;
+
+}
+
+section .main h1{position:relative;
+  font-size: 55px;
+  top:80px;
+  left:25px;
+
+}
+
+section .main h1 span{color:aqua;
+
+}
+section .main p {width:650px;
+  text-align: justify;
+  line-height: 22px;
+  position: relative;
+  top: 125px;
+  left:25px;
+
+
+}
+
+section .main .main-tag .main-btn{
+  background-color: rgb(24, 208, 147);
+  padding:10px 20px;
+  position: relative;
+  top:200px;
+  left:25px;
+  color:antiquewhite;
+  text-decoration: none;
+}
+
+section .main .main-img img{
+  width:780px;
+  position:relative;
+  top:90px;
+  left: 20px;
+}
+
+/*services*/
+
+.services{
+  width:100%;
+  height:auto;
+  margin:35px 0;
+}
+
+.services .services-box{
+  width:95%;
+  margin:0 auto;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.services .services-box .services-card{
+  text-align: center;
+  width:310px;
+  height: auto;
+  box-shadow: 0 0 8px #089da1;
+  padding: 15px 10px;
+}
+
+.services .services-box .services-card i{
+  color:#089da1;
+  font-size: 45px;
+  margin-bottom: 15px;
+  cursor:pointer;
+}
+
+.services .services-box .services-card h3{
+  margin-bottom: 10px;
+
+}
+
+/*about*/
+
+.about{
+  width:100%;
+  height:auto;
+  padding:20px;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about .about-image img{
+  width:800px;
+}
+
+.about .about-tag h1{
+  font-size: 50px;
+  position:relative;
+  bottom:35px;
+}
+
+.about .about-tag p{
+  line-height: 22px;
+  width:650px;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.about .about-tag .about-btn{
+  padding:10px 20px;
+  background-color:#089da1 ;
+  color:white;
+  text-decoration: none;
+  top:50px;
+  position: relative;
+}
+
+/*Books*/
+
+.featured-books{
+  width:100%;
+  height:100vh;
+  padding:70px 0;
+}
+.featured-books h1{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 45px;
+}
+
+.featured-books .featured-book-box{
+  width:95%;
+  height:60vh;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+  1fr 1fr 1fr 1fr 1fr;
+  overflow: hidden;
+  overflow-x:scroll;
+}
+
+.featured-books .featured-book-box .featured-book-card{
+  width:250px;
+  height:420px;
+  text-align: center;
+  padding:5px;
+  border:1px solid #919191;
+  margin:auto 20px;
+}
+
+.featured-books .featured-book-box .featured-book-card:hover{
+  box-shadow: 0 0 5px #089da1;
+}
+
+.featured-books .featured-book-box .featured-book-card .featured-book-img img{
+  width:150px;
+}
+
+.featured-books .featured-book-box .featured-book-card .featured-book-tag h2{
+  margin:18px;
+} 
+
+.featured-books .featured-book-box .featured-book-card .featured-book-tag .writer {
+  color:rgb(137, 127, 127)
+  
+}
+.featured-books .featured-book-box .featured-book-card .featured-book-tag .categories {
+  color:rgb(15, 121, 121);margin:10px;
+  margin-bottom: 20px;
+}
+
+.featured-books .featured-book-box .featured-book-card .featured-book-tag .download-btn{
+  padding:8px 10px;
+  border: solid black;
+  border:none;
+  border-radius: 6px;
+  color:white;
+  background-color: black;
+  text-decoration: none;
+  
+}
+
+::-webkit-scrollbar{
+  width:5px;
+  height:5px;
+}
+
+::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 8px rgb(0,0,0,0.2);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #089da1;
+  border-radius: 5px;
+}

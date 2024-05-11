@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asking questions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header" style="text-align: center">
+      <div class="logo">
+        <!-- Center the logo image within its container -->
+        <img
+          src="uitno.png"
+          alt="Logo"
+          height="80"
+          class="logo"
+          style="display: block; margin: 0 auto"
+        />
+        <!-- Replace 'UIT-Logo-big.png' with your actual logo file -->
+      </div>
+      <h1 style="margin-top: 20px">ask anything you want</h1>
+      <!-- Replace 'ask anything you want' with your actual title -->
+    </div>
+
+    <input type="text" id="promptInput" placeholder="Enter your prompt here" />
+    <button id="sendPrompt">Send Prompt</button>
+    <div id="loading" style="display: none">
+      <img src="ZZ5H.gif" alt="Loading..." height="50" />
+      <!-- Replace 'loading.gif' with the path to your actual loading image -->
+    </div>
+    <div id="responseText">Response will appear here</div>
+    <button class="exit-button">
+      <a href="../landing/index2.html"><img
+          src="box-arrow-left.svg"
+          alt="Exit"
+          style="height: 24px; width: 24px"
+        /> </a>
+    </button>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("sendPrompt")
+          .addEventListener("click", function () {
+            document.getElementById("loading").style.display = "block"; // Show the loading icon
+            document.getElementById("responseText").innerText = ""; // Clear previous response
+
+            const openaiApiKey =
+              "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"; // Replace with your actual API key
+            const userMessage = document.getElementById("promptInput").value;
+
+            fetch("https://api.openai.com/v1/chat/completions", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${openaiApiKey}`,
+              },
+              body: JSON.stringify({
+                model: "gpt-3.5-turbo", // Use the appropriate model version
+                messages: [{ role: "user", content: userMessage }],
+              }),
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                if (
+                  data.choices &&
+                  data.choices.length > 0 &&
+                  data.choices[0].message &&
+                  data.choices[0].message.content
+                ) {
+                  const messageContent = data.choices[0].message.content;
+                  document.getElementById("responseText").innerText =
+                    messageContent;
+                } else {
+                  console.error("No valid response in 'choices'", data);
+                  document.getElementById("responseText").innerText =
+                    "No valid response found.";
+                }
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+                document.getElementById("responseText").innerText =
+                  "Error: " + error.toString();
+              })
+              .finally(() => {
+                document.getElementById("loading").style.display = "none"; // Hide the loading icon
+              });
+          });
+      });  
+      document
+        .getElementById("promptInput")
+        .addEventListener("keypress", function (event) {
+          if (event.key === "Enter") {
+            document.getElementById("sendPrompt").click();
+          }
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lobby chat for section E</title>
+    <link rel="stylesheet" href="final.css" />
+    <style>
+      /* Simple modal styling */
+      #usernameModal {
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #usernameModalContent {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+      }
+      #chat {
+        display: none; /* Hide chat by default */
+      }
+    </style>
+  </head>
+  <body>
+    <header style="position: relative">
+      <button
+        class="exit-button"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 10px;
+          background-color: ;
+        "
+      >
+        <a href="../landing/index2.html">
+          <img
+            src="box-arrow-left.svg"
+            alt="Exit"
+            style="
+              height: 24px;
+              width: 24px;
+              background-color: rgb(137, 137, 137);
+              border-radius: 3px;
+            "
+          />
+        </a>
+      </button>
+      <h2>LOBBY chat</h2>
+    </header>
+
+    <!-- Username modal -->
+    <div id="usernameModal">
+      <div id="usernameModalContent">
+        <h2>Please Enter Your Name</h2>
+        <input id="username-input" type="text" placeholder="Username" />
+        <button id="submit-username">Submit</button>
+      </div>
+    </div>
+
+    <!-- Chat content -->
+    <div id="chat">
+      <ul id="messages"></ul>
+      <form id="message-form" class="flex-form">
+        <input id="message-input" type="text" />
+        <button id="message-btn" type="submit">Send</button>
+      </form>
+    </div>
+
+    <!-- Firebase and JavaScript -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src="index2.js"></script>
+    <script>
+      // Insert your existing JavaScript code here for initializing Firebase and handling messages
+
+      // Username modal logic
+      document
+        .getElementById("submit-username")
+        .addEventListener("click", function () {
+          const username = document
+            .getElementById("username-input")
+            .value.trim();
+          if (username) {
+            localStorage.setItem("username", username);
+            document.getElementById("usernameModal").style.display = "none";
+            document.getElementById("chat").style.display = "block"; // Show chat
+          }
+        });
+
+      // Check if username already exists
+      window.onload = function () {
+        const storedUsername = localStorage.getItem("username");
+        if (storedUsername) {
+          document.getElementById("usernameModal").style.display = "none";
+          document.getElementById("chat").style.display = "block"; // Show chat if username exists
+        }
+      };
+    </script>
+  </body>
+</html>

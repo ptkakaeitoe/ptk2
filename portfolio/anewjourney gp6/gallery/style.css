@@ -1,0 +1,124 @@
+/* General body styling */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  background-image: url(bggallery.png);
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  background-size: cover; /* Cover the entire page */
+  background-attachment: fixed;
+}
+
+/* Search area styling */
+.search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  width: 300px;
+  transition: border 0.3s ease-in-out;
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Gallery styling */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .search {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #searchInput {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.logo {
+  max-height: 100px;
+}
+
+.header {
+  text-align: center; /* Centers all content in the header */
+}
+
+.header-title {
+  font-family: "Roboto", sans-serif; /* Change 'Roboto' to any font you like */
+  font-size: 32px; /* Adjust size as needed */
+  font-weight: bold; /* Makes the font bolder */
+  color: #333; /* Change color as needed */
+  margin: 0; /* Removes default margin */
+  text-align: center;
+}
+
+.logo {
+  margin-top: 20px; /* Adjust space between title and logo */
+}
+.exit-button button {
+  padding: 10px 20px; /* Adjust based on your design */
+  font-size: 1em; /* Adjust based on your design */
+}
+
+/* Resize exit button for small screens */
+@media (max-width: 768px) {
+  .exit-button button {
+    padding: 5px 10px; /* Reduce padding on small screens */
+    font-size: 0.8em; /* Reduce font size on small screens */
+    max-width: 60px;
+  }
+}
