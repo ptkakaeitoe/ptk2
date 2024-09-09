@@ -1,119 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ptk's personal webpage</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Website Title -->
+    <title>ptk the2nd</title>
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font-Awesome -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="assets/font-awesome/css/font-awesome.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Lightbox -->
+    <link href="assets/lightbox/css/lightbox.css" rel="stylesheet" />
+    <!-- Text Rotator-->
+    <link href="assets/textrotator/simpletextrotator.css" rel="stylesheet" />
+    <!-- FlexSlider -->
+    <link href="assets/flexslider/flexslider.css" rel="stylesheet" />
+    <!-- Theme Style -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Animations -->
+    <link href="css/animate.css" rel="stylesheet" />
+    <!-- Custom Favicon -->
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="assets/html5shiv/html5shiv.js"></script>
+      <script src="assets/respond/respond.min.js"></script>
+    <![endif]-->
     <style>
-      body {
-        background-color: #343a40; /* Dark background */
+      /* Default styles */
+      .hero {
+        height: 100vh;
+        /* Other styles */
       }
-      .custom-container {
-        background-color: #6c757d; /* Consistent color for navbar, card, and column */
-        border: 1px solid #343a40; /* Dark border for better contrast */
-        border-radius: 5px;
-      }
-      .custom-navbar,
-      .custom-card {
-        background-color: #6c757d; /* Consistent color for navbar, card, and column */
-      }
-      .custom-card-header {
-        background-color: #6c757d;
-        font-size: 1.5rem;
+
+      /* Media query for smaller screens */
+      @media screen and (max-width: 768px) {
+        .hero {
+          height: 75vh; /* Adjust height for smaller screens */
+        }
       }
     </style>
   </head>
-  <body>
-    <!-- Notification Bar -->
-    <div class="alert alert-info alert-dismissible fade show" role="alert">
-      this is a testing webpage and a better version is available at
-      <strong><a href="https://ptkthe2nd.com">ptkthe2nd.com</a></strong>
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="alert"
-        aria-label="Close"
-      ></button>
-    </div>
+  <body id="top">
+    <!-- ****************************** Preloader ************************** -->
+    <div id="preloader"></div>
 
-    <div class="container custom-container mt-3 p-3">
-      <div class="row">
-        <div class="col-lg-6 col-sm-8 mx-auto custom-container">
-          <nav class="navbar navbar-expand-lg custom-navbar mb-3">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#" style="font-weight: bold"
-                >PTKthe2nd</a
-              >
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div
-                class="collapse navbar-collapse justify-content-center"
-                id="navbarNav"
-              >
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#" style="color: brown"
-                      >Home page</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="second.html">Projects</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="third.html">Roadmap</a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="portfolio/anewjourney gp6/landing/portfolio.html"
-                      >Portfolio</a
-                    >
-                  </li>
-                </ul>
+    <!-- ==========================
+        HEADER SECTION 
+        =========================== -->
+    <header id="home">
+      <!-- creative menu -->
+      <div class="container-fluid" style="background-color: #000000">
+        <div class="row">
+          <div class="menu-wrap">
+            <nav class="menu">
+              <!-- Menu Links -->
+              <div class="icon-list">
+                <a href="index.html#home"
+                  ><i class="fa fa-fw fa-home"></i><span>Home</span></a
+                >
+                <a href="index.html#about"
+                  ><i class="fa fa-fw fa-quote-left"></i><span>About</span></a
+                >
+                <a href="index.html#service"
+                  ><i class="fa fa-fw fa-globe"></i><span>Interests</span></a
+                >
+                <a href="index.html#portfolio"
+                  ><i class="fa fa-fw fa-picture-o"></i
+                  ><span>Portfolio</span></a
+                >
+                <a href="index.html#blog"
+                  ><i class="fa fa-fw fa-rss"></i><span>Blog</span></a
+                >
+                <a href="index.html#contact"
+                  ><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a
+                >
               </div>
+            </nav>
+          </div>
+          <button class="menu-button" id="open-button"></button
+          ><!-- menu button -->
+        </div>
+        <!--/row-->
+      </div>
+      <!--/container-->
+      <!-- Header Image -->
+      <section class="hero" id="hero">
+        <div class="container">
+          <!-- Slider Button (don't edit!)-->
+          <div class="row">
+            <div class="col-md-12 text-right navicon">
+              <a id="nav-toggle" class="nav_slide_button" href="index.html#"
+                ><span></span
+              ></a>
             </div>
-          </nav>
-
-          <h1 class="display-5 text-center">Welcome to My Personal Webpage</h1>
-          <div class="card custom-card mb-3">
-            <img src="image.jpg" alt="" class="card-img-top" />
-            <div class="card-header custom-card-header">Paingthukha</div>
-            <div class="card-body">
-              <p class="card-text">
-                A simple guy from UIT who loves to do nothing, just being
-                depressed about random things, thinking about life, having fun
-                in delusion, etc.
-              </p>
+          </div>
+          <!-- HEADER HEADLINE -->
+          <div class="row">
+            <div class="col-md-8 col-md-offset-1 inner">
+              <h1 class="animated fadeInDown">
+                P<span style="color: #e04343">TK</span><br />
+                <span>the<span style="color: #ffe800">2</span>nd</span>
+              </h1>
+              <!-- Title -->
+              <h3 class="animated fadeInUp delay-05s">
+                <span class="rotate">keep it [REDACTED]</span>
+              </h3>
+              <!-- Text Rotator -->
             </div>
-            <div class="card-footer">
-              <span>Link to my Telegram</span>
-              <a href="https://t.me/ptkthe2nd" class="btn btn-dark"
-                >Click here</a
-              >
+          </div>
+          <!-- Learn More Button -->
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+              <a href="index.html#about" class="scrollto wow fadeInUp delay-5s">
+                <p>SEE MORE</p>
+                <p class="scrollto--arrow">
+                  <img src="img/scroll-down.png" alt="scroll down arrow" />
+                </p>
+              </a>
             </div>
           </div>
         </div>
+      </section>
+      <!-- Header Image End -->
+    </header>
+    <!-- ==========================
+        HEADER SECTION END  
+        =========================== -->
+
+    <!-- ==========================
+        ABOUT SECTION  
+        =========================== -->
+    <section class="intro text-center section-padding color-bg" id="about">
+      <div class="container">
+        <!-- WELCOME TEXT -->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 wp1">
+            <h1 class="arrow">A little <span>about</span> me</h1>
+            <!-- Headline -->
+            <!-- about / welcome text -->
+            <p>
+              actually, i see myself no more than other people see me and hold
+              no more secrets than what people can find out at glace, but as an
+              ordinary human, hold some dreams, imaging some delusion and most
+              importantly trying my best to
+              <strong
+                style="font-size: 20px; font-style: italic; color: #ffe800"
+                >get out of the labyrinth</strong
+              >
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+    <section class="features text-center section-padding" id="service">
+      <div class="container">
+        <!-- Headline -->
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="arrow">Fields that I am planning to learn right now</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="services">
+              <!-- Service Box 1 -->
+              <div class="col-md-4 wp2 item">
+                <div class="icon">
+                  <i class="fa fa-camera"></i
+                  ><!-- Icon -->
+                </div>
+                <h2>Photography</h2>
+                <!-- Title -->
+                <p>
+                  After failing so many expectations and losing hope, I dont
+                  wanna be anything special anymore and just wanna go with the
+                  flow being in touch with nature and natural photography is the
+                  best way to keep in touch with this beautiful world
+                </p>
+                <!-- Description -->
+              </div>
+              <!-- Service Box 2 -->
+              <div class="col-md-4 wp2 item delay-05s">
+                <div class="icon">
+                  <i class="fa fa-desktop"></i
+                  ><!-- Icon -->
+                </div>
+                <h2>Web Designer</h2>
+                <!-- Title -->
+                <p>
+                  Actually, I dont have that much interest in it but at UIT , we
+                  have to learn it in the first semeter so I just want to
+                  improve to a certain level like junior web deveoper,Not sure
+                  if it will happen or not too
+                </p>
+                <!-- Description -->
+              </div>
+              <!-- Service Box 3 -->
+              <div class="col-md-4 wp2 item delay-1s">
+                <div class="icon">
+                  <i class="fa fa-cubes"></i
+                  ><!-- Icon -->
+                </div>
+                <h2>Machine learning</h2>
+                <!-- Title -->
+                <p>
+                  it has become kind of a trends because of the rising of AI
+                  tech but i have not really put any effort into it , i just
+                  wanna choose a career that might pay me a good salary , at
+                  this point, i really have not much motivation to do something
+                  new
+                </p>
+                <!-- Description -->
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-center section-padding contact-wrap" id="contact">
+      <!-- To Top Button -->
+      <a href="index.html#top" class="up-btn"
+        ><i class="fa fa-chevron-up"></i
+      ></a>
+      <div class="container">
+        <!-- Headline -->
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="arrow">Drop <span>me</span> a line</h1>
+          </div>
+        </div>
+        <div class="row contact-details">
+          <!-- Adress Box -->
+          <div class="col-md-4">
+            <div class="dark-box box-hover">
+              <h2><i class="fa fa-map-marker"></i><span>Address</span></h2>
+              <p>pathum thani,bangkok,thailand</p>
+            </div>
+          </div>
+          <!-- Phone Number Box -->
+          <div class="col-md-4">
+            <div class="dark-box box-hover">
+              <h2><i class="fa fa-mobile"></i><span>Phone</span></h2>
+              <p>+6665***2584</p>
+            </div>
+          </div>
+          <!-- E-Mail Box -->
+          <div class="col-md-4">
+            <div class="dark-box box-hover">
+              <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
+              <p><a href="index.html#">ptkakaeixxx@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <!-- Social Buttons - use font-awesome, past in what you want -->
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="social-buttons">
+              <li>
+                <a href="https://paingthukha.com/" class="social-btn"
+                  ><i class="fa fa-dribbble"></i
+                ></a>
+              </li>
+              <!-- dribble -->
+              <li>
+                <a href="https://twitter.com/ptkthe2nd" class="social-btn"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+              </li>
+              <!-- twitter -->
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100060953256576&mibextid=LQQJ4d"
+                  class="social-btn"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+              </li>
+              <!-- facebook -->
+
+              <!-- youtube -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==========================
+        SERVICE SECTION 
+        =========================== -->
+
+    <!-- ==========================
+        FOOTER SECTION
+        =========================== -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>
+              All Rights Reserved. &copy;2024
+              <a href="https://paingthukha.com/">ptkthe2nd</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ==========================
+        FOOTER SECTION END
+        =========================== -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- SmoothScroll -->
+    <script
+      type="text/javascript"
+      src="assets/smoothscroll/smoothscroll.js"
+    ></script>
+    <!-- Bootstrap -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/waypoints.min.js"></script>
+    <!-- classie.js -->
+    <script src="js/classie.js"></script>
+    <!-- FlexSlider -->
+    <script src="assets/flexslider/jquery.flexslider.js"></script>
+    <!-- Modernizr -->
+    <script src="js/modernizr.js"></script>
+    <!-- Text Rotator -->
+    <script src="assets/textrotator/jquery.simple-text-rotator.js"></script>
+    <!-- Lightbox.js -->
+    <script src="assets/lightbox/js/lightbox.min.js"></script>
+    <!-- Google Maps -->
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeKBBPJTG3v5w3cNPAgM6ZsJiPyL1mP_o&amp;sensor=false"
+    ></script>
+    <!-- Theme JavaScript Core -->
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- TEXT ROTATOR SETTINGS -->
+    <script type="text/javascript">
+      $(".rotate").textrotator({
+        animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
+        separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+        speed: 2000, // How many milliseconds until the next word show.
+      });
+    </script>
   </body>
 </html>
